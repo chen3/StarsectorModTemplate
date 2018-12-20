@@ -59,12 +59,7 @@ tasks.create("build") {
             into(outDirPath)
         }
         project.copy {
-            from(
-                Paths.get(
-                    project(":Mod").projectDir.toString(),
-                    "build", "libs", "${project(":Mod").name}.jar"
-                ).toString()
-            )
+            from(Paths.get(project(":Mod").projectDir.toString(),"build", "libs").toString())
             into(Paths.get(outDirPath, "jars").toString())
         }
         project.copy {
