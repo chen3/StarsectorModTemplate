@@ -11,4 +11,5 @@ tasks.withType<ShadowJar> {
 
 dependencies {
     compile(kotlin("stdlib-jdk8"))
+    compileOnly("com.fs.starfarer", "starfarer.api", rootProject.extra["starsector.version"] as String)
 }
